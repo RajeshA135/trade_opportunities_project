@@ -31,5 +31,6 @@ async def analyze_sector(sector: str, request: Request):
         raise HTTPException(status_code=500, detail="AI failed to generate report.")
     
     return {
-        "message": f"{sector} report generated successfully."
+        "message": f"{sector} report generated successfully.",
+        "Client IP Addess": client_ip
     }
